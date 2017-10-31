@@ -9,7 +9,13 @@ app.config(function($stateProvider, $urlRouterProvider){
       url: "/",
       templateUrl: "./views/home.html",
       controller: "homeController"
-    }
+    })
+
+    .state("restaurant-list", {
+      url: "restaurant-list",
+      templateUrl: "./views/restaurant-list.html",
+      controller: "restaurantController"
+    })
 
 
 }
