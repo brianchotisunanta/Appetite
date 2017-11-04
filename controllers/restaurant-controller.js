@@ -13,7 +13,7 @@ var Restaurant = function(id, name, address1, address2, city, state, zipcode) {
 
 var restaurantList = [];
 
-.restaurantList.push(new Restaurant(restaurantId++, "name", "address1", "address2", "city", "state", "zipcode", "phoneNumber"))
+restaurantList.push(new Restaurant(restaurantId++, "name", "address1", "address2", "city", "state", "zipcode", "phoneNumber"))
 
 
 
@@ -27,7 +27,9 @@ function index(req, res) {
 //POST  (create individual restaurant into restaurantList = [])
 function create(req, res) {
   restaurantList.unshift(req.body.restaurant)
+  console.log(req.body);
   res.json({restaurantList: restaurantList})
+  console.log(res.body);
 }
 
 //GET (grabbing individual restaurant from restaurantList = [])
