@@ -1,6 +1,6 @@
 angular
   .module("restaurantApp")
-  .service("service", function($http) {
+  .service("restaurantService", function($http) {
 
     //GET ALL MOVIES
     this.getRestaurantList = function() {
