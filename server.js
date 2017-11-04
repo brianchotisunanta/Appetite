@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // var index = require('./routes/index');
-var restaurants = require('./routes/restaurantList');
+var restaurants = require('./routes/restaurant');
 
 var app = express();
 
@@ -19,6 +19,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', index);
-app.use('/restaurantList', restaurantList);
+app.use('/restaurants', restaurants);  //restaurants referes to var restaurants = (line 9)
 
 module.exports = app;

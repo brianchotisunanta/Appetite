@@ -1,4 +1,4 @@
-var app = angular.module("newProject", ["ui-router"])
+var app = angular.module("restaurantApp", ["ui-router"])
 
 app.config(function($stateProvider, $urlRouterProvider){
 
@@ -11,11 +11,24 @@ app.config(function($stateProvider, $urlRouterProvider){
       controller: "homeController"
     })
 
+    .state("restaurants" {
+      url: "restaurants",
+      templateUrl: "./views/restaurants.html",
+      controller: "restaurantListController"
+    })
+
     .state("restaurant-list", {
       url: "restaurant-list",
-      templateUrl: "./views/restaurant-list.html",
-      controller: "restaurantController"
+      templateUrl: "./views/restaurant/list.html",
+      controller: "restaurantListController"
     })
+
+    .state("restaurant-list", {
+      url: "restaurantform",
+      templateUrl: "./views/restaurant/form.html",
+      controller: "restaurantListController"
+    })
+
 
 
 }

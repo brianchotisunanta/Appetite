@@ -1,6 +1,6 @@
 var restaurantId = null;
 
-var Restaurant = function(id, name, address1, address2, city, state, zipcode) {
+var Restaurant = function(id, name, address1, address2, city, state, zipcode,phoneNumber, website) {
   this.id = id;
   this.name = name;
   this.address1 = address1;
@@ -9,11 +9,20 @@ var Restaurant = function(id, name, address1, address2, city, state, zipcode) {
   this.state = state;
   this.zipcode = zipcode;
   this.phoneNumber = phoneNumber;
+  this.website = website;
 }
 
 var restaurantList = [];
 
-restaurantList.push(new Restaurant(restaurantId++, "name", "address1", "address2", "city", "state", "zipcode", "phoneNumber"))
+// restaurantList.push(new Restaurant(restaurantId++, "name", "address1", "address2", "city", "state", zipcode, "phoneNumber", "website"))
+
+restaurantList.push(new Restaurant(restaurantId++, "Thai Dishes on Broadway", "123 Broadway", "", "Santa Monica", "CA", 90401, "(310) 394-6189", "thaidishessantamonica.com"));
+
+restaurantList.push(new Restaurant(restaurantId++, "BCD Tofu House", "3575 Wilshire Blvd", "Los Angeles", "", "CA", 90010, "(213) 382-6677", "bcdtofu.com"));
+
+restaurantList.push(new Restaurant(restaurantId++, "Archi’s Thai Kitchen", "6360 W Flamingo Rd", "", "Las Vegas", "NV", 89103, "(702) 880-5550", "archithai.com"));
+
+restaurantList.push(new Restaurant(restaurantId++, "Pinoy Pinay Filipino Fastfood", "11900 South St", "#107-108", "Cerritos", "CA", 90703, "(562) 402-6682", "pinoypinayrestaurant.com"));
 
 
 
@@ -34,7 +43,7 @@ function create(req, res) {
 
 //GET (grabbing individual restaurant from restaurantList = [])
 function show(req, res) {
-  for(let i = 0, i < restaurantList.length, i++) {
+  for(let i = 0; i < restaurantList.length; i++) {
     if (restaurantList[i].id == req.params.id) {
       res.json({restaurantList: restaurantList[i]})
     }
@@ -61,7 +70,7 @@ function destroy(req, res) {
   }
 }
 
-module.export {
+module.exports = {
   index: index,
   create: create,
   show: show,
