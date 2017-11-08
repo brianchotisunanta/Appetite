@@ -34,7 +34,7 @@ restaurantList.push(new Restaurant(restaurantId++, "The Cheesecake Factory", "12
 
 restaurantList.push(new Restaurant(restaurantId++, "Kula Revolving Sushi Bar", "1065 Brea Mall", "Ste 2050A", "Brea", "CA", 92821, "(714) 582-5898", "kurausa.com"))
 
-restaurantList.push(new Restaurant(restaurantId++, "Charley's Steak", "1065 Brea Mall", "Food Court", "Brea", "CA", 92821, "(714) 674-0115", "charleys.com"))
+restaurantList.push(new Restaurant(restaurantId++, "Charleys Philly Steaks", "1065 Brea Mall", "Food Court", "Brea", "CA", 92821, "(714) 674-0115", "charleys.com"))
 
 restaurantList.push(new Restaurant(restaurantId++, "California Fish Grill", "419 S Associated Rd", "", "Brea", "CA", 92821, "(714) 482-2151", "cafishgrill.com"))
 
