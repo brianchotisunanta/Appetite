@@ -1,18 +1,27 @@
-<!-- Restaurant List -->
+<!-- Restaurant List ng-repeats -->
+
+<h1>Restaurants</h1>
 
 <div class="container">
   <div>
       <h1>Favorite Restaurants</h1>
   </div>
-  <div>
+  <div class="restaurant-info">
     <p>{{restaurant.id}}</p>
-    <h2>{{restaurant.name}}</h2>
-    <p>{{restaurant.address1}}</p>
-    <p>{{restaurant.address2}}</p>
-    <p>{{restaurant.city}}</p>
-    <p>{{restaurant.state}}</p>
-    <p>{{restaurant.zipcode}}</p>
-    <p>{{restaurant.phoneNumber}}</p>
-    <p>{{restaurant.website}}</p>
+    <h2><span>Name: </span>{{restaurant.name}}</h2>
+    <p><span>Address 1: </span>{{restaurant.address1}}</p>
+    <p><span>Address 2: </span>{{restaurant.address2}}</p>
+    <p><span>City: </span>{{restaurant.city}}</p>
+    <p><span>State: </span>{{restaurant.state}}</p>
+    <p><span>Zipcode: </span>{{restaurant.zipcode}}</p>
+    <p><span>Phone Number: </span>{{restaurant.phoneNumber}}</p>
+    <p><span>Website: </span>{{restaurant.website}}</p>
+    <div class="buttons-update-delete">
+      <button type="update" class="btn btn-warning">Update</button>
+      <button type="delete" class="btn btn-danger">Delete</button>
+    </div>
   </div>
 </div>
+
+
+<!-- Haven't pushed this changes yet - Nov 8 2017 -->
