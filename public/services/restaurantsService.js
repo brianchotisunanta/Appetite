@@ -12,6 +12,7 @@ angular
       return $http.post("http://localhost:3000/restaurantList", {restaurant: restaurant})
 
     }
+
 //GET
     this.showRestaurant = function(restaurant) {
       return $http.get("http://localhost:3000/restaurantList" + restaurant.id)
@@ -21,6 +22,7 @@ angular
     this.updateRestaurant = function(restaurant) {
       return $http.put("http://localhost:3000/restaurantList" + restaurant.id {restaurant: restaurant})
     }
+    
 //DELETE
     this.deleteRestaurant = function(restaurant) {
       return $http.delete("http://localhost:3000/restaurantList" + restaurant.id)
