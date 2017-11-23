@@ -1,15 +1,15 @@
 var restaurantId = null;
 
-var Restaurant = function(id, name, address1, address2, city, state, zipcode,phoneNumber, website) {
-  this.id = id;
-  this.name = name;
-  this.address1 = address1;
-  this.address2 = address2;
-  this.city = city;
-  this.state = state;
-  this.zipcode = zipcode;
-  this.phoneNumber = phoneNumber;
-  this.website = website;
+var Restaurant = function(restaurantId, restaurantName, restaurantAddress1, restaurantAddress2, restaurantCity, restaurantState, restaurantZipcode,restaurantPhoneNumber, restaurantWebsite) {
+  this.id = restaurantId;
+  this.name = restaurantName;
+  this.address1 = restaurantAddress1;
+  this.address2 = restaurantAddress2;
+  this.city = restaurantCity;
+  this.state = restaurantState;
+  this.zipcode = restaurantZipcode;
+  this.phoneNumber = restaurantPhoneNumber;
+  this.website = restaurantWebsite;
 }
 
 var restaurantList = [];
@@ -91,3 +91,5 @@ module.exports = {
   update: update,
   destroy: destroy
 }
+
+
