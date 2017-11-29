@@ -4,10 +4,10 @@ angular
 
     restaurantsService.getRestaurantList()
     .then(function(response){
-      $scope.restaurantList = response.data.movies
+      $scope.restaurantList = response.data.restaurantList
     })
 
-    var restaurantList = 11;
+    var restaurantId = 11
 
     var Restaurant = function(restaurantId, restaurantName, restaurantAddress1, restaurantAddress2, restaurantCity, restaurantState, restaurantZipcode,restaurantPhoneNumber, restaurantWebsite) {
       this.id = restaurantId;
@@ -30,45 +30,72 @@ angular
     $scope.phoneNumber = ""
     $scope.website = ""
 
+
+
 //************************ FUNCTIONS ************************
 
-// Submit new Restaurant Button:
+// Submit Button:
     $scope.submitRestaurant = function() {
-      restaurantsService.createRestaurant(new Restaurant(restaurantId++, $scope.name, $scope.address1, $scope.address2, $scope.city, $scope.state, $scope.zipcode, $scope.phoneNumber, $scope.website))
+
+      //Warning for submitting blank input filed:
+          $scope.missingName = function() {
+            if ($scope.name == ""){
+              missingName == true;
+            }
+            else {
+              missingName == false;
+            }
+          }
+
+      restaurantsService.createRestaurant(new Restaurant(restaurantId++,
+      $scope.name,
+      $scope.address1,
+      $scope.address2,
+      $scope.city,
+      $scope.state,
+      $scope.zipcode,
+      $scope.phoneNumber,
+      $scope.website))
       .then(function(response) {
         $scope.restaurantList = response.data.restaurantList
       })
+
+
       $scope.name = ""
       $scope.address1 = ""
       $scope.address2 = ""
       $scope.city = ""
-      $scope.state = ""
+      $scope
       $scope.zipcode = ""
       $scope.phoneNumber = ""
       $scope.website = ""
+
+
     }
 
     var currentRestaurantId = null;
+    $scope.submitButton = true;       //shows Submit Button
+    $scope.saveButton = false;        //hides Save Button
 
-// Update Restaurant Button:
+// Update Button:
     $scope.updateRestaurant = function(updatedRestaurant) {
-      currentRestaurantId = updateRestaurant.id;
-      $scope.name = updatedRestaurant.name;
-      $scope.address1 = updatedRestaurant.address1;
-      $scope.address2 = updatedRestaurant.address2;
-      $scope.city = updatedRestaurant.city;
-      $scope.state = updatedRestaurant.state;
-      $scope.zipcode = updatedRestaurant.zipcode;
-      $scope.phoneNumber = updatedRestaurant.phoneNumber;
-      $scope.website = updatedRestaurant.website;
+      currentRestaurantId = updatedRestaurant.restaurantId;
+      $scope.name = updatedRestaurant.restaurantName;
+      $scope.address1 = updatedRestaurant.restaurantAddress1;
+      $scope.address2 = updatedRestaurant.restaurantAddress2;
+      $scope.city = updatedRestaurant.restaurantCity;
+      $scope.state = updatedRestaurant.restaurantState;
+      $scope.zipcode = updatedRestaurant.restaurantZipcode;
+      $scope.phoneNumber = updatedRestaurant.restaurantPhoneNumber;
+      $scope.website = updatedRestaurant.restaurantWebsite;
 
       $scope.submitButton = false;    //hide
       $scope.saveButton = true;       //show
     }
 
-//Save Restaurant Button:
+//Save Button:
     $scope.saveRestaurant = function() {
-      var restaurant = new Restaurant(currentRestaurantId, $scope.name, $scope.address1, $scope.address2, $scope.city, $scope.state, $scope.zipcode, $scope.phoneNumber, $scope.website)
+      var restaurant = new Restaurant(restaurantId, $scope.restaurantName, $scope.restaurantAddress1, $scope.restaurantAddress2, $scope.restaurantCity, $scope.restaurantState, $scope.restaurantZipcode, $scope.restaurantPhoneNumber, $scope.restaurantWebsite)
 
       restaurantsService.updateRestaurant(restaurant)
       .then(function(response) {
@@ -89,7 +116,7 @@ angular
       $scope.website = "";
     }
 
-//Delete Restaurant Button:
+//Delete Button:
     $scope.deleteRestaurant = function(restaurant) {
       restaurantsService.deleteRestaurant(restaurant)
         .then(function(response){
