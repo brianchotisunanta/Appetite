@@ -18,7 +18,7 @@ var restaurantList = [];
 
 restaurantList.push(new Restaurant(restaurantId++, "Thai Dishes on Broadway", "123 Broadway", "", "Santa Monica", "CA", 90401, "(310) 394-6189", "thaidishessantamonica.com"));
 
-restaurantList.push(new Restaurant(restaurantId++, "BCD Tofu House", "3575 Wilshire Blvd", "Los Angeles", "", "CA", 90010, "(213) 382-6677", "bcdtofu.com"));
+restaurantList.push(new Restaurant(restaurantId++, "BCD Tofu House", "3575 Wilshire Blvd", "", "Los Angeles", "CA", 90010, "(213) 382-6677", "bcdtofu.com"));
 
 restaurantList.push(new Restaurant(restaurantId++, "Archi’s Thai Kitchen", "6360 W Flamingo Rd", "", "Las Vegas", "NV", 89103, "(702) 880-5550", "archithai.com"));
 
@@ -49,6 +49,7 @@ function index(req, res) {
 
 //POST  (create individual restaurant into restaurantList = [])
 function create(req, res) {
+  console.log(req.body.restaurant);
   restaurantList.unshift(req.body.restaurant)
   console.log(req.body);
   res.json({restaurantList: restaurantList})
@@ -59,7 +60,7 @@ function create(req, res) {
 function show(req, res) {
   for(let i = 0; i < restaurantList.length; i++) {
     if (restaurantList[i].id == req.params.id) {
-      res.json({restaurantList: restaurantList[i]})
+      res.json({restaurant: restaurantList[i]})
     }
   }
 }
@@ -77,7 +78,7 @@ function update(req, res) {
 //DELETE (grabbing individual restaurant from restaurantList = [])
 function destroy(req, res) {
   for (let i = 0; i < restaurantList.length; i++) {
-    if (restaurantList[i].id == req.params.id) {
+    if (req.params.id == restaurantList[i].id) {
       restaurantList.splice(i, 1)
       res.json({restaurantList: restaurantList})
     }
