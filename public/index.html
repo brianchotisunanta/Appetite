@@ -48,8 +48,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-mobile">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Restaurant Fill-in-Form<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Restaurants</a></li>
+        <li><a ui-sref="restaurants">Restaurant</a></li>
+        <li><a ui-sref="restaurant-list">Restaurants</a></li>
+        <li><a ui-sref="restaurant-form">Restaurant Form</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -67,7 +68,7 @@
 
 <!-- controllers -->
 <script type="text/javascript" src="./controllers/homeController.js"></script>
-<script type="text/javascript" src="./controllers/restaurantController.js"></script>
+<script type="text/javascript" src="./controllers/restaurantListController.js"></script>
 
 </body>
 </html>
