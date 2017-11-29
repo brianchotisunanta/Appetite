@@ -4,14 +4,14 @@ app.config(function($stateProvider, $urlRouterProvider){
 
   $urlRouterProvider.otherwise("/");
 
-  .$stateProvider
+  $stateProvider
     .state("home", {
       url: "/",
       templateUrl: "./views/home.html",
       controller: "homeController"
     })
 
-    .state("restaurants" {
+    .state("restaurants", {
       url: "restaurants",
       templateUrl: "./views/restaurants.html",
       controller: "restaurantListController"
@@ -23,12 +23,9 @@ app.config(function($stateProvider, $urlRouterProvider){
       controller: "restaurantListController"
     })
 
-    .state("restaurant-list", {
+    .state("restaurant-form", {
       url: "restaurantform",
       templateUrl: "./views/restaurant/form.html",
       controller: "restaurantListController"
     })
-
-
-
-}
+)}
