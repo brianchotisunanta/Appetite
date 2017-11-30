@@ -1,14 +1,195 @@
-/*body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bangers', cursive;
+}
+
+span {
+  font-weight: bold;
+}
+
+/*********************** Index.html ***********************/
+.navbar {
+  background-color: black;
+  border-bottom: solid 6px #d80d00;
+}
+
+.navbar-header {
+  margin-top: 33px;
+
+}
+
+.navbar-collapse {
+  margin-top: 33px;
+  text-align: center;
+}
+
+#toogle-btn {
+  background-color: #2196F3;
+}
+.navbar-default .navbar-toggle {
+    border-color: #2196F3;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #2196F3;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2196F3;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+/*brand navbar link:*/
+.navbar-default .navbar-brand {
+  color: #03A9F4;
+}
+
+/*brand navbar link hover:*/
+.navbar-default .navbar-brand:hover {
+  color: #ffeb3b;
+  font-size: 36px;
+}
+
+/*navbar restaurant-list link:*/
+#link-restaurant-list {
+  color: #E91E63;
+}
+
+/*navbar restaurant-list link hover*/
+#link-restaurant-list:hover {
+  color: #FFEB3B;
+  background-color: transparent;
+  font-size: 36px;
+}
+/*navbar restaurant-form link:*/
+#link-restaurant-form {
+  color: #9C27B0;
+}
+
+/*navbar restaurant-form link hover*/
+#link-restaurant-form:hover {
+  color: #FFEB3B;
+  background-color: transparent;
+  font-size: 36px;
+}
+
+/************************ home.html ************************/
+
+.jumbotron {
+  background: url("../images/sushi.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*opacity: 0.7;*/
+  color: #ff1908;
+  margin-bottom: 10px;
+}
+
+.jumbo-text:hover {
+  color: yellow;
+}
+
+
+/******************** restaurants.html ********************/
+
+#restaurant-list-container {
+  background: url("../images/sushi.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*width: auto;*/
+
+}
+
+.restaurant-list-content {
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+.restaurants-heading {
+  /*background-color: #0070CC;*/
+  color: red;
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Prevents contents from spilling outside of the div: */
+.clearfix {
+  /*overflow: auto;*/
+}
+
+.restaurant-title {
+  font-size: 70px;
+  color: #c31a0e;
+}
+
+.restaurant-info {
+  margin-bottom: 10px;
+}
+
+#restaurant-id {
+  color: yellow;
+}
+
+.restaurant-info > h2 {
+  color: #c31a0e;
+  font-size: 34px;
+  margin-top: 0px;
+}
+
+.restaurant-info > p {
+  color: yellow;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+span {
+  color: #c31a0e;
+}
+
+
+/*************** restaurant-fill-in-form.html ***************/
+#form-container {
+  width: 100%;
+  /*height: auto;*/
+  background: url("../images/pad_thai.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.form-container {
+  margin-bottom: 10px;
+}
+
+.missingName {
+  color:red;
+}
+
+
+/*************************** footer ***************************/
+
+footer {
+  background-color: #000;
+  color: #fff;
+  border-top: solid 6px #d80d00;
+  padding: 30px;
+}
+
+footer:hover {
+  background-color: #d80d00;
+  color: #fff;
+  border-top: solid 6px black;
 }
