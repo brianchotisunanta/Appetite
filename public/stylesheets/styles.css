@@ -16,6 +16,9 @@ span {
 .navbar {
   background-color: black;
   border-bottom: solid 6px #d80d00;
+  /*position: fixed;*/
+  /*top: 0;*/
+  width: 100%;
 }
 
 .navbar-header {
@@ -83,8 +86,15 @@ span {
 
 /************************ home.html ************************/
 
-.jumbotron {
-  background: url("../images/sushi.jpg") no-repeat center center fixed;
+/*.jumbotron*/
+.home-container {
+  /*min-height: 100%;
+  min-width: 1024px;*/
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  background: url("../images/sushi.jpg") no-repeat center center fixed;    /*no-repeat center center fixed*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -92,6 +102,23 @@ span {
   /*opacity: 0.7;*/
   color: #ff1908;
   margin-bottom: 10px;
+}
+
+/*@media screen and (max-width: 768px) {
+  .jumbotron {
+    min-width: 0;
+  }*/
+
+.home-content {
+  padding: 163px 0;
+}
+
+.home-text {
+  font-size: 63px !important;
+}
+
+.jumbo-text {
+  font-size: 30px;
 }
 
 .jumbo-text:hover {
@@ -102,7 +129,9 @@ span {
 /******************** restaurants.html ********************/
 
 #restaurant-list-container {
-  background: url("../images/sushi.jpg") no-repeat center center fixed;
+  background: url("../images/bibimbab.jpg") no-repeat center center fixed;
+  /*position: fixed;*/
+  /*opacity: 0.7;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -161,9 +190,12 @@ span {
 
 /*************** restaurant-fill-in-form.html ***************/
 #form-container {
+  /*min-height: 100%;*/
+  /*min-width: 1024px;*/
   width: 100%;
-  /*height: auto;*/
-  background: url("../images/pad_thai.jpg") no-repeat center center fixed;
+  height: auto;
+  background: url("../images/kimchi_tofu_soup.jpg") no-repeat;    /*no-repeat center center fixed*/
+  /*position: absolute;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -178,6 +210,16 @@ span {
   color:red;
 }
 
+.form-heading {
+  color: #53d465;
+  font-size: 70px;
+}
+
+label {
+  color: #335bd6;
+  font-size: 30px;
+}
+
 
 /*************************** footer ***************************/
 
@@ -186,6 +228,8 @@ footer {
   color: #fff;
   border-top: solid 6px #d80d00;
   padding: 30px;
+  /*position: fixed;*/
+  /*width: 100%;*/
 }
 
 footer:hover {
