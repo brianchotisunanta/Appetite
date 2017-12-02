@@ -6,15 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Restaurant Project</title>
 
+<!-- Google font Bangers -->
+  <style> @import url('https://fonts.googleapis.com/css?family=Bangers'); </style>
+
 <!-- jQuery 3.2.1 minified-->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap 3.3.7 CDN's-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -23,11 +26,11 @@
   <link rel="stylesheet" href="./stylesheets/styles.css">
 
 <!-- AngularJS CDN-->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
 
 <!-- Angular UI Router -->
 <script src="https://ajax.googleapis.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
-
 
 </head>
 <body>
@@ -36,39 +39,36 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" id="toogle-btn" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" ui-sref="home">Home</a>
     </div>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-mobile">
-      <ul class="nav navbar-nav">
-        <li><a ui-sref="restaurants">Restaurant</a></li>
-        <li><a ui-sref="restaurant-list">Restaurants</a></li>
-        <li><a ui-sref="restaurant-form">Restaurant Form</a></li>
+      <ul class="nav navbar-nav text-center">
+        <li><a id="link-restaurant-list"ui-sref="restaurantlist">Restaurants</a></li>
+        <li><a id="link-restaurant-form" ui-sref="restaurant-form">Restaurant Form</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<!-- angular injection -->
+<!-- Angular injection -->
 <div ui-view></div>
 
-<!-- angular module -->
+<!-- Angular module -->
 <script type="text/javascript" src="./app.js"></script>
 
-<!-- services -->
+<!-- Services -->
 <script type="text/javascript" src="./services/restaurantsService.js"></script>
 
-<!-- controllers -->
+<!-- Controllers -->
 <script type="text/javascript" src="./controllers/homeController.js"></script>
-<script type="text/javascript" src="./controllers/restaurantListController.js"></script>
+<script type="text/javascript" src="./controllers/restaurantsController.js"></script>
 
 </body>
 </html>
