@@ -37,8 +37,10 @@
         <input type="text" class="form-control" id="website" placeholder="McDonalds.com" ng-model="website">
       </div>
       <div class="restaurant-submit-and-save-btns col-md-6 col-md-offset-3">
-        <button type="button" class="btn btn-primary btn-block" ui-sref="restaurantlist" ng-click="submitRestaurant()" ng-show="submitButton">Submit</button>
+        <!-- ui-sref="restaurantlist" -->
+        <button type="button" class="btn btn-primary btn-block" ng-click="submitRestaurant()" ng-show="submitButton">Submit</button>
         <button type="button" class="btn btn-success btn-block" ng-click="saveRestaurant()" ng-show="saveButton">Save</button>
+        <button type="button" class="btn btn-danger btn-block" ng-click="showRestaurant()" ng-show="showRestaurant">Return to Restaurant List</button>
       </div>   <!-- End of restaurant-submit-and-save-btns -->
     </div>  <!-- End of Form  -->
   </div>
