@@ -1,6 +1,6 @@
 angular
   .module("restaurantApp")
-  .service("restaurantService", function($http) {
+  .service("restaurantsService", function($http) {
 
 //GET ALL RESTAURANTS IN THE restaurantList []:
     this.getRestaurantList = function() {
@@ -15,19 +15,19 @@ angular
 
 //GET
     this.showRestaurant = function(restaurant) {
-      return $http.get("http://localhost:3000/restaurantList" + restaurant.id)
+      return $http.get("http://localhost:3000/restaurantList/" + restaurant.id)
     }
 
 //PUT
     this.updateRestaurant = function(restaurant) {
-      return $http.put("http://localhost:3000/restaurantList" + restaurant.id, {restaurant: restaurant})
+      return $http.put("http://localhost:3000/restaurantList/" + restaurant.id, {restaurant: restaurant})
     }
 
 //DELETE
     this.deleteRestaurant = function(restaurant) {
-      return $http.delete("http://localhost:3000/restaurantList" + restaurant.id)
+      return $http.delete("http://localhost:3000/restaurantList/" + restaurant.id)
     }
   })
 
 // sidenote:
-// restaurant.id = object.property(property = key NOT value)
+// restaurant.id = object.key (object { key:value })
