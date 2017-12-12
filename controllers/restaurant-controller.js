@@ -40,24 +40,35 @@ restaurantList.push(new Restaurant(restaurantId++, "California Fish Grill", "419
 
 
 
-// RESTfull API's
+//********************************* RESTfull API's *********************************
 
 //Get (All)
 function index(req, res) {
+  console.log("*************** GET restaurants from restaurantList [] ***************");
   res.json({restaurantList: restaurantList})
 }
 
-//POST  (create individual restaurant into restaurantList = [])
+//POST  (creating individual restaurant into restaurantList = [])
 function create(req, res) {
+  //these console.logs show up in the terminal:
+  console.log("*************** POST restaurant ***************");
   console.log(req.body.restaurant);
+
+//This is will make a new object start with id = 11 and id++ for every new object posted:
+  req.body.restaurant.id = restaurantId++
+
   restaurantList.unshift(req.body.restaurant)
+
   console.log(req.body);
+
   res.json({restaurantList: restaurantList})
+
   console.log(res.body);
 }
 
-//GET (grabbing individual restaurant from restaurantList = [])
+//GET (showing individual restaurant from restaurantList = [])
 function show(req, res) {
+  console.log("*************** GET restaurant ***************")
   for(let i = 0; i < restaurantList.length; i++) {
     if (restaurantList[i].id == req.params.id) {
       res.json({restaurant: restaurantList[i]})
@@ -65,18 +76,21 @@ function show(req, res) {
   }
 }
 
-//PUT (grabbing individual restaurant from restaurantList = [])
+//PUT (updating individual restaurant from restaurantList = [])
+// ************* THIS IS NOT SHOWING UP IN THE NODEMON TERMINAL *************
 function update(req, res) {
+  console.log("*************** PUT restaurant ***************")
   for (let i = 0; i < restaurantList.length; i++) {
-    if (restaurantList[i].id == req.params.id) {
-      restaurantList.splice(i, 1, req.params.restaurant)
+    if (req.body.restaurant.id == restaurantList[i].id) {
+      restaurantList.splice(i, 1, req.body.restaurant)
       res.json({restaurantList: restaurantList})
     }
   }
 }
 
-//DELETE (grabbing individual restaurant from restaurantList = [])
+//DELETE (deleting individual restaurant from restaurantList = [])
 function destroy(req, res) {
+  console.log("*************** DELETE restaurant ***************")
   for (let i = 0; i < restaurantList.length; i++) {
     if (req.params.id == restaurantList[i].id) {
       restaurantList.splice(i, 1)
