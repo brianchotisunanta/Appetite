@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Restaurant Project</title>
+  <title>Appetite</title>
 
 <!-- Google font Bangers -->
   <style> @import url('https://fonts.googleapis.com/css?family=Bangers'); </style>
 
-<!-- jQuery 3.2.1 minified-->
+<!-- jQuery 3.2.1 minified (LOAD BEFORE Bootstrap.min.js) -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap 3.3.7 CDN's-->
@@ -19,8 +19,15 @@
   <!-- Optional theme -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
 
-  <!-- Latest compiled and minified JavaScript -->
+  <!-- Latest compiled and minified JavaScript (LOAD after jQuery.min.js)-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+
+
+  <link rel="stylesheet" href="./stylesheets/Highlight-Blue.css">
+  <link rel="stylesheet" href="./stylesheets/Highlight-Clean.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
 
 <!-- Custom Style Scheet CSS -->
   <link rel="stylesheet" href="./stylesheets/styles.css">
@@ -35,40 +42,45 @@
 </head>
 <body>
 
+<!-- Navbar -->
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" id="toogle-btn" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" ui-sref="home">Home</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse-mobile">
-      <ul class="nav navbar-nav text-center">
-        <li><a id="link-restaurant-list"ui-sref="restaurantlist">Restaurants</a></li>
-        <li><a id="link-restaurant-form" ui-sref="restaurant-form">Restaurant Form</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" id="toogle-btn" data-toggle="collapse" data-target="#navbar-collapse-mobile" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar top-bar"></span>
+                <span class="icon-bar middle-bar"></span>
+                <span class="icon-bar bottom-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Appetite</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-mobile">
+            <ul class="nav navbar-nav text-center">
+                <li><a id="link-restaurant-list"ui-sref="restaurants">Restaurants</a></li>
+                <li><a id="link-restaurant-form" ui-sref="newRestaurant">Restaurant Form</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 
 <!-- Angular injection -->
 <div ui-view></div>
 
+<script type="text/javascript" src="./environment.js"></script>
+
+<script src="./bs-animation.js"></script>
+
 <!-- Angular module -->
 <script type="text/javascript" src="./app.js"></script>
-
 <!-- Services -->
 <script type="text/javascript" src="./services/restaurantsService.js"></script>
-
 <!-- Controllers -->
 <script type="text/javascript" src="./controllers/homeController.js"></script>
-<script type="text/javascript" src="./controllers/restaurantsController.js"></script>
+<script type="text/javascript" src="./controllers/restaurantListController.js"></script>
+<!-- <script type="text/javascript" src="./controllers/oldRestaurantListController.js"></script> -->
+
 
 </body>
 </html>
