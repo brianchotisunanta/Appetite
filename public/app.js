@@ -1,6 +1,6 @@
-var app = angular.module("restaurantApp", ["ui-router"])
+var app = angular.module("restaurantApp", ["ui.router"])
 
-app.config(function($stateProvider, $urlRouterProvider){
+app.config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/");
 
@@ -12,20 +12,19 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
 
     .state("restaurants", {
-      url: "restaurants",
-      templateUrl: "./views/restaurants.html",
+      url: "/restaurants",       //http://localhost:3000/#!/restaurant-list
+      templateUrl: "./views/restaurants.html",              //file name in views
       controller: "restaurantListController"
     })
 
-    .state("restaurant-list", {
-      url: "restaurant-list",
-      templateUrl: "./views/restaurant/list.html",
+    .state("newRestaurant", {
+      url: "/restaurants/new",      //http://localhost:3000/#!/restaurant-form
+      templateUrl: "./views/restaurant-fill-in-form.html",    //file name in views
       controller: "restaurantListController"
     })
-
-    .state("restaurant-form", {
-      url: "restaurantform",
-      templateUrl: "./views/restaurant/form.html",
+    .state("updateRestaurant", {
+      url: "/restaurants/:id",
+      templateUrl: "./views/restaurant-fill-in-form.html",
       controller: "restaurantListController"
     })
-)}
+})
