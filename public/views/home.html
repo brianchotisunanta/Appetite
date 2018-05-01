@@ -1,26 +1,47 @@
-<div class="home-container">
-  <div class="home-content">
-    <h1 class="jumbo-text text-center home-text">Are you hungry?</h1>
-    <h1 class="jumbo-text text-center home-text">Check out these places to eat</h1>
-    <h2 class="jumbo-text text-center">Add your favorite restaurant to the list too!</h2>
-    <p class="text-center"><a class="btn btn-danger btn-lg" ui-sref="restaurantlist" role="button">Find your restaurant</a></p>
-    <p class="text-center"><a class="btn btn-success btn-lg" ui-sref="restaurant-form" role="button">Enter your favorite restaurant</a></p>
-  </div>
+<div class="home-container visible-xs-block visible-sm-block visible-md-block visible-lg-block" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+    <div class="home-content visible-xs-block visible-sm-block visible-md-block visible-lg-block" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="500">
+        <h1 class="jumbo-text text-center home-text">Welcome to Appetite!</h1>
+        <h1 class="jumbo-text text-center home-text">Are you hungry?</h1>
+        <h1 class="jumbo-text text-center home-text">Check out these places to eat</h1>
+        <h2 class="jumbo-text text-center">Add your favorite restaurant to the list too!</h2>
+        <p class="text-center"><a class="btn btn-danger btn-lg" ui-sref="restaurants" role="button">Find your restaurant</a></p>
+        <p class="text-center"><a class="btn btn-success btn-lg" ui-sref="newRestaurant" role="button">Enter your favorite restaurant</a></p>
+    </div>
 </div>
 
-<footer class="text-center">
-  <p>Designed by Brian Chotisunanta</p>
-  <p>2017</p>
-</footer>
+<div data-aos="slide-up" data-aos-duration="1000" data-aos-delay="500" class="highlight-blue">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center" data-aos="zoom-in" data-aos-duration="1000">Highlight</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Primary</a></div>
+    </div>
+</div>
 
+<div class="visible-xs-block visible-sm-block visible-md-block visible-lg-block" data-aos="zoom-out-down" data-aos-duration="1000" data-aos-delay="500" style="height:1000px;background-image:url(./images/galbi.jpg);background-position:center;background-size:cover;">
+</div>
 
+<div data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500" class="highlight-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Highlight</h2>
+            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Primary</a><button class="btn btn-default" type="button">Secondary</button></div>
+    </div>
+</div>
 
+<div class="visible-xs-block visible-sm-block visible-md-block visible-lg-block" data-aos="zoom-out-up" data-aos-duration="1000" data-aos-delay="500"           style="height:1000px;background-image:url(./images/kimchi_tofu_soup.jpg);background-position:center;background-size:cover;">
+</div>
 
-<!-- Save for later: -->
-<!-- <div class="jumbotron">
-  <h1 class="jumbo-text text-center">Are you hungry?</h1>
-  <h1 class="jumbo-text text-center">Check out these places to eat</h1>
-  <h2 class="jumbo-text text-center">Add your favorite restaurant to the list too!</h2>
-  <p class="text-center"><a class="btn btn-danger btn-lg" ui-sref="restaurantlist" role="button">Find your restaurant</a></p>
-  <p class="text-center"><a class="btn btn-success btn-lg" ui-sref="restaurant-form" role="button">Enter your favorite restaurant</a></p>
-</div> -->
+<div class="footer-basic">
+      <footer>
+          <ul class="list-inline">
+              <li id="footer-home"><a ui-sref="home">Home</a></li>
+              <li id="footer-restaurant"><a ui-sref="restaurants">Restaurants</a></li>
+              <li id="footer-restaurant-form"><a ui-sref="newRestaurant">Restaurant Form</a></li>
+          </ul>
+          <p class="copyright">Brian Chotisunanta © 2017</p>
+      </footer>
+  </div>
