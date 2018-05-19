@@ -1,23 +1,30 @@
-<!-- Restaurant List ng-repeats -->
 <div class="container col-md-12" id="restaurant-list-container">
-  <div class="restaurant-list-content">
-    <div class="restaurants-heading text-center">
-        <h1 class="restaurant-title">Favorite Restaurants</h1>
+    <div class="restaurant-list-content">
+        <div class="restaurants-heading text-center">
+            <!-- Restaurant List ng-repeats -->
+            <h1 class="restaurant-title">Favorite Restaurants</h1>
+        </div>
+        <div class="restaurant-info clearfix col-md-6 col-md-offset-3" ng-repeat="restaurant in restaurantList">
+            <h3 class="col-md-12" id="restaurant-id"><span>id: </span>{{restaurant.id}}</h3>
+            <h2 class="col-md-12">{{restaurant.name}} </h2>
+            <p class="col-md-12"><span>Address 1: </span>{{restaurant.address1}}</p>
+            <p class="col-md-12"><span>Address 2: </span>{{restaurant.address2}}</p>
+            <p class="col-md-12"><span>City: </span>{{restaurant.city}}</p>
+            <p class="col-md-12"><span>State: </span>{{restaurant.state}}</p>
+            <p class="col-md-12"><span>Zipcode: </span>{{restaurant.zipcode}}</p>
+            <p class="col-md-12"><span>Phone Number: </span>{{restaurant.phoneNumber}}</p>
+            <p class="col-md-12"><span>Website: </span>{{restaurant.website}}</p>
+            <div class="buttons-update-delete col-md-12">
+                <button type="button" class="btn btn-info col-md-4"  ui-sref="updateRestaurant( {id: restaurant.id} )">Update</button>
+                <button type="button" class="btn btn-danger col-md-4 col-md-offset-2" ng-click="deleteRestaurant(restaurant)">Delete</button>
+            </div>
+            <!-- <div class="restaurantMap"> Restaurant Map
+              <iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ3CYT9CkwoARBzF9cD3qGMU&key="+api_key+" "allowfullscreen></iframe>
+
+<iframe width="100%" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ3CYT9CkwoARBzF9cD3qGMU&key=AIzaSyDSw9pY-NDrRQZklibo1v-bS5Vdk6988KU" allowfullscreen></iframe>
+            </div> -->
+        </div>
     </div>
-    <div class="restaurant-info clearfix col-md-6 col-md-offset-3" ng-repeat="restaurant in restaurantList">
-      <h3 class="col-md-12" id="restaurant-id"><span>id: </span>{{restaurant.id}}</h3>
-      <h2 class="col-md-12">{{restaurant.name}} </h2>
-      <p class="col-md-12"><span>Address 1: </span>{{restaurant.address1}}</p>
-      <p class="col-md-12"><span>Address 2: </span>{{restaurant.address2}}</p>
-      <p class="col-md-12"><span>City: </span>{{restaurant.city}}</p>
-      <p class="col-md-12"><span>State: </span>{{restaurant.state}}</p>
-      <p class="col-md-12"><span>Zipcode: </span>{{restaurant.zipcode}}</p>
-      <p class="col-md-12"><span>Phone Number: </span>{{restaurant.phoneNumber}}</p>
-      <p class="col-md-12"><span>Website: </span>{{restaurant.website}}</p>
-      <div class="buttons-update-delete col-md-12">
-        <button type="button" class="btn btn-info col-md-4"  ui-sref="restaurant-form" ng-click="updateRestaurant(restaurant)">Update</button>
-        <button type="button" class="btn btn-danger col-md-4 col-md-offset-2" ng-click="deleteRestaurant(restaurant)">Delete</button>
-      </div>
-    </div>
-  </div>
 </div>
