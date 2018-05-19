@@ -1,4 +1,4 @@
-var restaurantId = null;
+var restaurantId = 0; // had it assigned to null
 
 var Restaurant = function(restaurantId, restaurantName, restaurantAddress1, restaurantAddress2, restaurantCity, restaurantState, restaurantZipcode,restaurantPhoneNumber, restaurantWebsite) {
   this.id = restaurantId;
@@ -42,33 +42,30 @@ restaurantList.push(new Restaurant(restaurantId++, "California Fish Grill", "419
 
 //********************************* RESTfull API's *********************************
 
+//****** All console.logs in these functions will show up in the terminal running nodemon: ******
+
 //Get (All)
 function index(req, res) {
-  console.log("*************** GET restaurants from restaurantList [] ***************");
+  console.log("*************** GET (INDEX function) restaurants from restaurantList [] ***************");
   res.json({restaurantList: restaurantList})
 }
 
 //POST  (creating individual restaurant into restaurantList = [])
 function create(req, res) {
-  //these console.logs show up in the terminal:
-  console.log("*************** POST restaurant ***************");
+  console.log("*************** POST (CREATE function) restaurant ***************");
   console.log(req.body.restaurant);
 
 //This is will make a new object start with id = 11 and id++ for every new object posted:
   req.body.restaurant.id = restaurantId++
-
   restaurantList.unshift(req.body.restaurant)
-
   console.log(req.body);
-
   res.json({restaurantList: restaurantList})
-
   console.log(res.body);
-}
+}   //end of create()
 
-//GET (showing individual restaurant from restaurantList = [])
+//GET an individual restaurant with ID from restaurantList = [])
 function show(req, res) {
-  console.log("*************** GET restaurant ***************")
+  console.log("*************** GET (SHOW function) restaurant ***************")
   for(let i = 0; i < restaurantList.length; i++) {
     if (restaurantList[i].id == req.params.id) {
       res.json({restaurant: restaurantList[i]})
@@ -79,9 +76,10 @@ function show(req, res) {
 //PUT (updating individual restaurant from restaurantList = [])
 // ************* THIS IS NOT SHOWING UP IN THE NODEMON TERMINAL *************
 function update(req, res) {
-  console.log("*************** PUT restaurant ***************")
+  console.log("*************** PUT (UPDATE function) restaurant ***************")
+  console.log(req.params.id);
   for (let i = 0; i < restaurantList.length; i++) {
-    if (req.body.restaurant.id == restaurantList[i].id) {
+    if (restaurantList[i].id == req.params.id) {        //different here
       restaurantList.splice(i, 1, req.body.restaurant)
       res.json({restaurantList: restaurantList})
     }
@@ -90,7 +88,7 @@ function update(req, res) {
 
 //DELETE (deleting individual restaurant from restaurantList = [])
 function destroy(req, res) {
-  console.log("*************** DELETE restaurant ***************")
+  console.log("*************** DELETE (DESTROY function) restaurant ***************")
   for (let i = 0; i < restaurantList.length; i++) {
     if (req.params.id == restaurantList[i].id) {
       restaurantList.splice(i, 1)
