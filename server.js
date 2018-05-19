@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// var index = require('./routes/index');
-var restaurants = require('./routes/restaurant');
+// var index = require('./routes/index');     This is the route:
+var restaurantList = require('./routes/restaurantList');  //.routes/restaurantList = refers to restaurantList.js file name
 
 var app = express();
 
@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', index);
-app.use('/restaurants', restaurants);  //restaurants referes to var restaurants = (line 9)
+// app.use('/', index);       Using the route:
+app.use('/restaurantList', restaurantList);  //restaurantList refers to var restaurantList = (line 9)
 
 module.exports = app;
