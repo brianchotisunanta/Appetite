@@ -2,15 +2,15 @@
 
 ## **_Check out my app on Heroku:_** **[Appetite on Heroku.com](https://appetite-brianchotisunanta.herokuapp.com/#!/ "Appetite")** :smile: :smile:
 
-This is a web application that enables you to view a list of my favorite restaurants, add to the list of restaurants, update and save the changes to existing restaurants on the list, and delete a restaurant on the list (CRUD).  Technologies used: Front-end: HTML5, CSS3, JavaScript, jQuery, Bootstrap, AngularJS, Google Fonts, CSS Animations Back-end: Node.js, Express
+This is a web application that enables you to view a list of my favorite restaurants, add to the list of restaurants, update and save the changes to existing restaurants on the list, and delete a restaurant on the list (CRUD).
 
 ## Web Technologies used:
 
 ### _Front-End (Client-side):_
 * **_HTML5_**
 * **_CSS3_**
-* **_CSS Animations_**
 * **_JavaScript_**
+* **_CSS Animations_**
 * **_Bootstrap_**
 * **_jQuery_**
 * **_AngularJS_**
