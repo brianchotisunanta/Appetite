@@ -1,5 +1,5 @@
 angular
-  .module("restaurantApp")
-  .controller("homeController", function($scope) {
+    .module("restaurantApp")
+    .controller("homeController", function($scope) {
 
-  })
+    })
