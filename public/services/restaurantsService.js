@@ -25,7 +25,8 @@ angular
           state: "",
           zipcode: "",
           phoneNumber: "",
-          website: ""
+          website: "",
+          image: ""
         }
         callback(restaurant)
       }
