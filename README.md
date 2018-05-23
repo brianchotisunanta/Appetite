@@ -35,7 +35,7 @@ You are able to **_DELETE_** every single individual Restaurant from the page (H
 
 # Screenshots: :smile:
 
-*_Desktop screenshots:_*
+**_Desktop screenshots:_**
 
 ![screen shot 2018-05-19 at 5 58 29 am](https://user-images.githubusercontent.com/24735848/40268859-595fe6e6-5b2a-11e8-965b-18f895d04ee1.png)
 
@@ -61,7 +61,7 @@ You are able to **_DELETE_** every single individual Restaurant from the page (H
 
 ![screen shot 2018-05-19 at 6 00 46 am](https://user-images.githubusercontent.com/24735848/40268871-5a964bf4-5b2a-11e8-933b-ac2720b9c348.png)
 
-*_Mobile (Responsive) screenshots:_*
+**_Mobile (Responsive) screenshots:_**
 
 ![screen shot 2018-05-23 at 2 31 29 am](https://user-images.githubusercontent.com/24735848/40416539-64f470ca-5e32-11e8-9a6d-b81a230c52bf.png)
 
