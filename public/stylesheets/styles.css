@@ -244,6 +244,15 @@ span {
   margin: 20px;
 }
 
+/* Check this later */
+/* @media screen {
+  #restaurant-image > img {
+    height: 200px;
+    width: 300px;
+    margin: 0;
+  }
+} */
+
 
 /*************** restaurant-fill-in-form.html ***************/
 #form-container {
